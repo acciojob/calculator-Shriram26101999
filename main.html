@@ -7,86 +7,77 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-	<div class="container">
-		
-		<div id="display">
-			<input id="input" value=""  />
-		</div>
-		<br>
-		<br/>
-		<table>
-			<tr>
-				<td>
-					<button class="button" id="block1" value="1" onclick="add(this.value)">1</button>
-				</td>
-				<td>
-					<button class="button" id="block2" value="2" onclick="add(this.value)">2</button>
-				</td>
-				<td>
-					<button class="button" id="block3" value="3" onclick="add(this.value)">3</button>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<button class="button" id="block4" value="4" onclick="add(this.value)">4</button>
-				</td>
-				<td>
-					<button class="button" id="block5" value="5" onclick="add(this.value)">5</button>
-				</td>
-				<td>
-					<button class="button" id="block6" value="6" onclick="add(this.value)">6</button>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<button class="button" id="block7" value="7" onclick="add(this.value)">7</button>
-				</td>
-				<td>
-					<button class="button" id="block8" value="8" onclick="add(this.value)">8</button>
-				</td>
-				<td>
-					<button class="button" id="block9" value="9" onclick="add(this.value)">9</button>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<button class="button" id="block0" value="0" onclick="add(this.value)">0</button>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<button class="button" id="plus" value="+" onclick="add(this.value)">+</button>
-				</td>
-				<td>
-					<button class="button" id="minus" value="-" onclick="add(this.value)">-</button>
-				</td>
-				<td>
-					<button class="button" id="multiply" value="*" onclick="add(this.value)">*</button>
-				</td>
-			</tr>
-			<tr>	
-				<td>
-					<button class="button" id="divide" value="/" onclick="add(this.value)">/</button>
-				</td>
-				<td>
-					<button class="button" id="clr" value="clr" onclick="clear()">clr</button>
-				</td>
-				<td>
-					<button class="button" id="dot" value="." onclick="add(this.value)">.</button>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><button class="button" id="ans" value="ans" onclick=ans()>ans</button></td>
-			</tr>
-		</table>
-	</div>
+	import React, { useState } from 'react';
 
+function Calculator() {
+  const [displayValue, setDisplayValue] = useState('');
+
+  function handleNumberClick(number) {
+    setDisplayValue(displayValue + number);
+  }
+
+  function handleAdd() {
+    // TODO: Implement add function
+  }
+
+  function handleSubtract() {
+    // TODO: Implement subtract function
+  }
+
+  function handleMultiply() {
+    // TODO: Implement multiply function
+  }
+
+  function handleDivide() {
+    // TODO: Implement divide function
+  }
+
+  function handleClear() {
+    setDisplayValue('');
+  }
+
+  function handleBackspace() {
+    setDisplayValue(displayValue.slice(0, -1));
+  }
+
+  function handleOpenParenthesis() {
+    setDisplayValue(displayValue + '(');
+  }
+
+  function handleCloseParenthesis() {
+    setDisplayValue(displayValue + ')');
+  }
+
+  function handleEquals() {
+    // TODO: Implement equals function
+  }
+
+  return (
+    <div className="calculator">
+      <div id="display">{displayValue}</div>
+      <button id="plus" onClick={handleAdd}>+</button>
+      <button id="minus" onClick={handleSubtract}>-</button>
+      <button id="divi" onClick={handleDivide}>/</button>
+      <button id="multi" onClick={handleMultiply}>*</button>
+      <button id="op" onClick={handleOpenParenthesis}>(</button>
+      <button id="cl" onClick={handleCloseParenthesis}>)</button>
+      <button id="C" onClick={handleClear}>C</button>
+      <button id="back" onClick={handleBackspace}>Backspace</button>
+      <button id="equal" onClick={handleEquals}>=</button>
+      <button id="1" onClick={() => handleNumberClick('1')}>1</button>
+      <button id="2" onClick={() => handleNumberClick('2')}>2</button>
+      <button id="3" onClick={() => handleNumberClick('3')}>3</button>
+      <button id="4" onClick={() => handleNumberClick('4')}>4</button>
+      <button id="5" onClick={() => handleNumberClick('5')}>5</button>
+      <button id="6" onClick={() => handleNumberClick('6')}>6</button>
+      <button id="7" onClick={() => handleNumberClick('7')}>7</button>
+      <button id="8" onClick={() => handleNumberClick('8')}>8</button>
+      <button id="9" onClick={() => handleNumberClick('9')}>9</button>
+      <button id="0
+<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
 
 </body>
 
-</html>
+	  </html>
